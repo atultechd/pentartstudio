@@ -6,26 +6,19 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
 html{
     scroll-behavior: smooth;
-  font-size: 62.5%;
+    font-size: 57.5%;
+    max-width: 1300px;
+    min-width: 350px;
 }
-
-@media(max-width: 998px){
-  html{
-    font-size: 55%;
-  }
+body{
+    overflow-x: hidden;
 }
-
-@media(max-width: 768px){
-  html{
-    font-size: 45%;
-  }
-}
-
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 1rem;
 }
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
@@ -39,17 +32,17 @@ html{
 }
 
 section{
-    padding: 50px 0;
+    /*padding: 5rem 0;*/
+    overflow: auto;
 }
 .max_width{
-    max-width: 1300px;
-    padding: 10px 80px;
+    padding: 1rem 8rem;
     margin: auto;
 }
 .max_width_section{
-    max-width: 1300px;
-    padding: 70px 50px 0;
+    display: flex;
     margin: auto;
+    
 }
 .about, .services, .skills, .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
@@ -63,37 +56,10 @@ section{
     align-items: center;
     justify-content: space-between;
 }
-section .title{
-    position: relative;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
-    font-family: 'Ubuntu', sans-serif;
-}
-section .title::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    width: 180px;
-    height: 3px;
-    background: #000;
-    transform: translateX(-50%);
-}
-section .title::after{
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    font-size: 20px;
-    color: crimson;
-    padding: 0 5px;
-    background: #fff;
-    transform: translateX(-50%);
-}
 
-/* navbar styling */
+/*.......................navbar styling.................... */
+
+
 .navbar{
     position: fixed;
     width: 100%;
@@ -101,13 +67,10 @@ section .title::after{
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
     background-color: white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0rem 0.6rem 1.2rem -0.2rem, 
+    rgba(0, 0, 0, 0.3) 0rem 0.3rem 0.7rem -0.3rem;
 }
-.navbar.sticky{
-    padding: 15px 0;
-    background: crimson;
-}
+
 .navbar .max_width{
     display: flex;
     align-items: center;
@@ -115,9 +78,9 @@ section .title::after{
 }
 
 .logo{
-    padding-top: 10px;
+    padding-top: 1rem;
     border: none;
-    border-radius: 15px;
+    border-radius: 1.5rem;
 
 }
 .navbar .menu li{
@@ -127,21 +90,21 @@ section .title::after{
 .navbar .menu li a{
     display: block;
     color: #000;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
-    margin-left: 25px;
+    margin-left: 2.5rem;
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    width:150px;
-    height:50px;
-    padding-top:30px;
-    padding-left: 22px;
-    padding-right: 22px;
+    width:15rem;
+    height:5rem;
+    padding-top:3rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
     cursor: pointer;
     background: linear-gradient(266.29deg, #FF9C07 -0.46%, 
         rgba(247, 63, 0, 0.78) 118.81%);
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0rem 0rem 1rem 1rem;
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -149,91 +112,65 @@ section .title::after{
 
 /* menu  styling */
 .menu-btn{
-    font-size: 23px;
+    font-size: 2.3rem;
     cursor: pointer;
     display: none;
-    padding: 30px;
+    padding: 3.0rem;
     text-align: center;
 }
 
-.active{
-    text-align: center;
-    width:150px;
-    height:50px;
-    margin-top: 0;
-    padding: 30px;
-    cursor: pointer;
-    background: linear-gradient(266.29deg, #FF9C07 -0.46%, 
-        rgba(247, 63, 0, 0.78) 118.81%);
-    grid-area: 1/1/2/2;
-    border-radius: 0px 0px 10px 10px;
-    color: white;
-}
-.scroll-up-btn{
-    position: fixed;
-    height: 45px;
-    width: 42px;
-    background: crimson;
-    right: 30px;
-    bottom: 10px;
-    text-align: center;
-    line-height: 45px;
-    color: #fff;
-    z-index: 9999;
-    font-size: 30px;
-    border-radius: 6px;
-    border-bottom-width: 2px;
-    cursor: pointer;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
+
+/*.............. home section styling.....................*/
 
 
-/* home section styling */
 .home{
+    background-image: linear-gradient(315deg, #ebe9e9 0%, #fbfbfb 74%);
     display: flex;
-    background: url("banner.jpg") no-repeat center;
+    flex-direction: row;
     height: 100vh;
-    color: #000;
-    min-height: 500px;
+    width: 100vw;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
 .home .max_width_section{
-  width: 100%;
-  display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 .home .max_width_section .row{
-  margin-right: 0;
-  margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 4rem;
 }
 .home .home-content .text-1{
-    font-size: 64px;
+    font-size: 6.4rem;
     font-weight: 600;
     font-family: poppins;
     font-style: normal;
 }
 .home .home-content .text-2{
-    font-size: 64px;
+    font-size: 6.4rem;
     font-weight: 600;
-    margin-left: -3px;
+    margin-left: -0.3rem;
     font-family: poppins;
     font-style: normal;
 }
 /*text-2 mission*/
+
 b{
     background-color: #00d0ff;
     color: white;
 }
 
 .arrow img{
-    margin-left: 500px;
+    margin-left: 50.0rem;
     margin-top: 0;
 }
 .home .home-content .text-3{
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #848282;
 }
 
@@ -241,64 +178,77 @@ b{
     display: inline-block;
     background: linear-gradient(266.29deg, #FF9C07 -0.46%, 
         rgba(247, 63, 0, 0.78) 118.81%);
-    border-radius: 6px;
+    border-radius: .6rem;
     color: #fff;
-    font-size: 25px;
-    padding: 12px 36px;
-    margin-top: 40px;
+    font-size: 2.5rem;
+    padding: 1.2rem 3.6rem;
+    margin-top: 4.0rem;
     font-weight: 400;
     transition: all 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .get_started:hover{
     background:linear-gradient(266.29deg, #af6900 -0.46%, 
         rgb(212, 54, 0 , 78%) 118.81%);
     cursor: pointer;
-    padding: 13px 37px;
+    padding: 1.3rem 3.7rem;
 }
-
+.teams{
+    display: flex;
+    justify-content: flex-end;
+    /*flex-wrap: wrap;*/
+    float: right;
+    width: 50%;
+}
 .teams img{
-    border: none;
-    border-radius: 70px;
-    width: 562px;
-    height: 440px;
+    object-fit: cover;
+    width: 45rem;
 }
 
 .social_media{
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .redirect_sm img{
-    padding: 20px 10px 20px;
+    padding: 2rem 1rem 2rem;
 }
 
 .redirect_sm img:hover{
     transform: rotate(-30deg);
-  cursor: pointer;
-  transition: transform 0.5s;
+    cursor: pointer;
+    transition: transform 0.5s;
 }
 
-/*services...*/
+/*..............service section styling........................*/
+
 
 #services{
-    background-color: #fef6f0;
-    padding-bottom: 50px;
-    padding-top: 120px;
+    background: url("line2.png") no-repeat center top;
+    background-color: #F8A42D;
+    padding-bottom: 5rem;
+    padding-top: 12rem;
+}
+
+#services p{
+    font-size: 1.4rem;
+    text-align: justify;
 }
 
 .our_services{
     text-align: center;
     font-family: Poppins;
-    font-size: 18px;
-    line-height: 27px;
-    color: #F59046;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: #ffffff;
     font-weight: 500;
 }
 
 .heading{
-    padding-top: 10px;
+    color: white;
+    padding-top: 1rem;
     text-align: center;
     font-family: Poppins;
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 500;
 }
 
@@ -306,193 +256,336 @@ b{
     width: 80vw;
     display: flex;
     justify-content: space-around;
-    padding: 40px;
+    padding: 4rem;
+    border: none;
+    border-radius: 1.5rem;
     background-color: white;
     font-family: poppins;
-    margin: 50px auto auto;
+    margin: 4rem auto;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .content1b{
-    padding-left: 80px; 
+    padding-left: 8rem; 
 }
 .branding{
     font-style: bold;
-    font-size: 22px;
-    padding-bottom: 20px;
+    font-size: 2.2rem;
+    padding-bottom: 2.0rem;
+}
+.about_branding{
+    font-size: 1.4rem;
 }
 
 .service2{
     width: 80vw;
     display: flex;
     justify-content: space-around;
-    padding: 40px;
+    padding: 4.0rem;
+    border: none;
+    border-radius: 1.5rem;
     background-color: white;
     font-family: poppins;
-    margin: 50px auto auto;
+    margin: 4rem auto; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .web_d{
     font-style: bold;
-    font-size: 22px;
-    padding-bottom: 20px;
+    font-size: 2.2rem;
+    padding-bottom: 2.0rem;
+}
+.about_web_d{
+    font-size: 1.4rem;
 }
 
 .content2a{
-    padding-right:80px;
+    padding-right:8.0rem;
 }
 
 .service3{
     width: 80vw;
     display: flex;
     justify-content: space-around;
-    padding: 40px;
+    padding: 4.0rem;
+    border: none;
+    border-radius: 1.5rem;
     background-color: white;
     font-family: poppins;
-    margin: 50px auto auto;
+    margin: 4rem auto; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .content3b{
-    padding-left: 80px; 
+    padding-left: 8.0rem; 
 }
 .seo{
     font-style: bold;
-    font-size: 22px;
-    padding-bottom: 20px;
+    font-size: 2.2rem;
+    padding-bottom: 2.0rem;
 }
 
 .service4{
     width: 80vw;
     display: flex;
     justify-content: space-around;
-    padding: 40px;
+    padding: 4.0rem;
+    border: none;
+    border-radius: 1.5rem;
     background-color: white;
     font-family: poppins;
-    margin: 50px auto 150px;
+    margin: 5.0rem auto 15.0rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .app_dev{
     font-style: bold;
-    font-size: 22px;
-    padding-bottom: 20px;
+    font-size: 2.2rem;
+    padding-bottom: 2.0rem;
 }
 
 .content4a{
-    padding-right:80px;
+    padding-right:8.0rem;
 }
 
 
-/*........About us......*/
+/*...............About us section styling.....................*/
+
 
 #about{
-    padding-top: 110px;
+    padding-top: 11.0rem;
+    padding-bottom: 5rem;
 }
 
 .about_us{
     text-align: center;
     font-family: Poppins;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
     color: #F59046;
     font-weight: 500;
 }
 
 .why_us{
-    padding-top: 10px;
-    padding-bottom: 50px;
+    padding-top: 1.0rem;
+    padding-bottom: 5.0rem;
     text-align: center;
     font-family: Poppins;
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 500;
 }
 
 .content_aboutus{
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    padding-left: 50px;
-    padding-right: 50px;
+    justify-content: center;
+    align-items: center; 
+    padding-left: 5.0rem;
+    padding-right: 5.0rem;
+}
+
+.c_about1 img{
+    width: 41rem;
+    float: left;
+    margin-right: 1rem;
 }
 
 .c_about2{
     font-family: poppins;
-    padding-left: 60px;
+    padding-left: 6.0rem;
     font-style: regular;
-    font-size: 20px;
+    font-size: 2.0rem;
     letter-spacing: 8.5%;
     color:#676262;
+    text-align: justify;
 }
 
 p{
     color:#676262;
 }
 
-/*.......contact us..........*/
+/*................contact us section styling......................*/
 
+.section4{
+    padding: 5rem 0;
+}
 #contact{
+    padding-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #5b5b5b;
     border: none;
-    border-radius: 61px;
+    border-radius: 6.1rem;
+    width: 85%;
+    margin: auto;
 }
 
 .contactus{
-    padding-top: 40px;
+    padding-top: 4.0rem;
     font-family: poppins;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: white;
-    text-align: center;
     font-weight: 500;
 }
 .heading_contact{
-    padding-top: 10px;
-    padding-bottom: 30px;
-    text-align: center;
+    padding-top: 1rem;
     font-family: Poppins;
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 500;
     color: white;
 }
 
 .sub_heading{
-    text-align: center;
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
     color: white;
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
+
+}
+.field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.email{
-    padding-left: 518px;
-    padding-bottom: 20px; 
-}
 .mail{
-    width: 19.5vw;
-    height: 8vh;
-    border: none;
-    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    padding: 1.5rem 4rem;
+    border-radius: 0.7rem;
 }
-
-.textarea{
-    width: 40vw;
-    margin: auto;
-    padding-left: 130px;
-}
-
 .message{
-    border: none;
-    border-radius: 10px;
+    margin : 1.5rem auto;
+    outline: 0;
+    border: 0;
+    border-radius: 0.7rem;
 }
-
 .send_msg{
-    margin-top: 25px;
-    margin-left: 515px;
-    margin-bottom: 25px;
-    padding: 6px 105px 6px;
+    margin: 0.1rem auto 1rem;
+    border: 0;
+    border-radius: 0.5rem;
     font-family: poppins;
-    font-size: 14px;
-    border: none;
-    border-radius: 10px;
+    font-size: 1.5rem;
     background: linear-gradient(266.29deg, #FF9C07 -0.46%, 
         rgba(247, 63, 0, 0.78) 118.81%);
-
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+    padding: 1rem 9.5rem;
+}
+.send_msg:hover{
+    background:linear-gradient(266.29deg, #af6900 -0.46%, 
+        rgb(212, 54, 0 , 78%) 118.81%);
+    cursor: pointer;
+    padding: 1.2rem 10.6rem;
 }
 
+
+/*................Media Queries for responsiveness......................*/
+
+
+@media(max-width: 998px){
+    html{
+        font-size: 50%;
+        box-sizing: border-box;
+    }
+    .home{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 768px){
+    html{
+        font-size: 42%;
+        box-sizing: border-box;
+    }
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+        color: white;
+        left: -50%
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 50%;
+        left: -50%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 50%;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        color: white;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .active{
+        background:none;
+    }
+   /* .home{
+        background: linear-gradient(to right, #00000066, #00000066), url("teams.png") no-repeat center;
+    }
+    .teams img{
+        display: none;*/
+    }
+    .service1{
+        flex-direction: column;
+    }
+    .service1 .content1b{
+        padding: 0;
+    }
+    .service1 img{ 
+        width: 25rem;
+        height: 11rem;
+    }
+    .service2{
+        flex-direction: column;
+    }
+    .service2 .content2b{
+        padding: 0;
+    }
+    .service2 img{ 
+        width: 25rem;
+        height: 11rem;
+    }
+    .service3{
+        flex-direction: column;
+    }
+    .service3 .content3b{
+        padding: 0;
+    }
+    .service3 img{ 
+        width: 25rem;
+        height: 11rem;
+    }
+    .service4{
+        flex-direction: column;
+    }
+    .service4 .content4b{
+        padding: 0;
+    }
+    .service4 img{ 
+        width: 25rem;
+        height: 11rem;
+    }
+    .c_about1 img{
+        min-width: 35rem;
+        float: left;
+        shape-outside: circle(50%);
+    }
+}
