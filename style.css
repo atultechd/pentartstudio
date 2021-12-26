@@ -224,6 +224,7 @@ b{
 
 #services{
     background: url("line2.png") no-repeat center top;
+    background-size: 10rem ;
     background-color: #F8A42D;
     padding-bottom: 5rem;
     padding-top: 12rem;
@@ -555,7 +556,7 @@ p{
     .service2{
         flex-direction: column;
     }
-    .service2 .content2b{
+    .service2 .content2a{
         padding: 0;
     }
     .service2 img{ 
@@ -575,7 +576,7 @@ p{
     .service4{
         flex-direction: column;
     }
-    .service4 .content4b{
+    .service4 .content4a{
         padding: 0;
     }
     .service4 img{ 
@@ -585,7 +586,6 @@ p{
     .c_about1 img{
         min-width: 35rem;
         float: left;
-        shape-outside: circle(50%);
     }
 }
 
@@ -606,6 +606,9 @@ p{
     }
     .row{
         width: 100%;
+    }
+    #services{
+        background-image: none;
     }
     #about{
         background: none;
