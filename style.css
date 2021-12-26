@@ -10,8 +10,8 @@
 html{
     scroll-behavior: smooth;
     font-size: 57.5%;
-    max-width: 1300px;
-    min-width: 350px;
+    max-width: 1350px;
+    /*min-width: 350px;*/
 }
 body{
     overflow-x: hidden;
@@ -146,13 +146,13 @@ section{
     padding-left: 4rem;
 }
 .home .home-content .text-1{
-    font-size: 6.4rem;
+    font-size: 6.0rem;
     font-weight: 600;
     font-family: poppins;
     font-style: normal;
 }
 .home .home-content .text-2{
-    font-size: 6.4rem;
+    font-size: 6.0rem;
     font-weight: 600;
     margin-left: -0.3rem;
     font-family: poppins;
@@ -170,7 +170,7 @@ b{
     margin-top: 0;
 }
 .home .home-content .text-3{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #848282;
 }
 
@@ -253,6 +253,7 @@ b{
 }
 
 .service1{
+    flex-direction: row;
     width: 80vw;
     display: flex;
     justify-content: space-around;
@@ -278,6 +279,7 @@ b{
 }
 
 .service2{
+    flex-direction: row;
     width: 80vw;
     display: flex;
     justify-content: space-around;
@@ -304,6 +306,7 @@ b{
 }
 
 .service3{
+    flex-direction: row;
     width: 80vw;
     display: flex;
     justify-content: space-around;
@@ -326,6 +329,7 @@ b{
 }
 
 .service4{
+    flex-direction: row;
     width: 80vw;
     display: flex;
     justify-content: space-around;
@@ -353,6 +357,8 @@ b{
 
 
 #about{
+    background: url("line.png") no-repeat;
+    background-position: 67rem 19rem;
     padding-top: 11.0rem;
     padding-bottom: 5rem;
 }
@@ -380,8 +386,7 @@ b{
     display: flex;
     justify-content: center;
     align-items: center; 
-    padding-left: 5.0rem;
-    padding-right: 5.0rem;
+    padding: 5rem;
 }
 
 .c_about1 img{
@@ -537,12 +542,6 @@ p{
     .active{
         background:none;
     }
-   /* .home{
-        background: linear-gradient(to right, #00000066, #00000066), url("teams.png") no-repeat center;
-    }
-    .teams img{
-        display: none;*/
-    }
     .service1{
         flex-direction: column;
     }
@@ -587,5 +586,34 @@ p{
         min-width: 35rem;
         float: left;
         shape-outside: circle(50%);
+    }
+}
+
+@media(max-width: 560px){
+    html{
+        font-size: 35%;
+        box-sizing: border-box;
+    }
+    .home{
+        background: url("bg_home.png") no-repeat;
+        background-attachment: fixed;
+    }
+    .teams{
+        display: none;
+    }
+    .teams img{
+        display: none;
+    }
+    .row{
+        width: 100%;
+    }
+    #about{
+        background: none;
+    }
+    .content_aboutus{
+        display: inline;
+    }
+    .c_about1 img{
+        margin-right: 10rem;
     }
 }
