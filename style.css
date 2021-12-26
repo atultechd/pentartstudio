@@ -224,7 +224,8 @@ b{
 
 #services{
     background: url("line2.png") no-repeat center top;
-    background-size: 10rem ;
+    background-size:70rem 24rem;
+    background-position: 297px 108px;
     background-color: #F8A42D;
     padding-bottom: 5rem;
     padding-top: 12rem;
@@ -615,8 +616,5 @@ p{
     }
     .content_aboutus{
         display: inline;
-    }
-    .c_about1 img{
-        margin-right: 10rem;
     }
 }
