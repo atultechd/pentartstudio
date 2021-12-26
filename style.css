@@ -524,13 +524,18 @@ p{
         width: 50%;
         left: -50%;
         top: 0;
-        background: #111;
+        background: #ffffff00;
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
     }
     .navbar .menu.active{
         left: 50%;
+        height: 80rem;
+        background: url("circle.png");
+        background-repeat: no-repeat;
+        background-position: 100% 300%;
+        background-size: 44rem 91rem;
     }
     .navbar .menu li{
         display: block;
@@ -538,8 +543,8 @@ p{
     .navbar .menu li a{
         display: inline-block;
         color: white;
-        margin: 20px 0;
-        font-size: 25px;
+        margin: 4px 0;
+        font-size: 20px;
     }
     .active{
         background:none;
@@ -594,6 +599,18 @@ p{
     html{
         font-size: 35%;
         box-sizing: border-box;
+    }
+    .navbar .menu.active{
+        left: 50%;
+        height: 80rem;
+        background: url("circle.png");
+        background-repeat: no-repeat;
+        background-position: -3% 213%;
+        background-size: 51rem 87rem;
+    }
+    .navbar .menu li a{
+        margin: 7px 0;
+        font-size: 16px;
     }
     .home{
         background: url("bg_home.png") no-repeat;
