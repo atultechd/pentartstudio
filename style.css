@@ -11,7 +11,6 @@ html{
     scroll-behavior: smooth;
     font-size: 57.5%;
     max-width: 1350px;
-    /*min-width: 350px;*/
 }
 body{
     overflow-x: hidden;
@@ -31,8 +30,8 @@ body{
     background: #555;
 }
 
+
 section{
-    /*padding: 5rem 0;*/
     overflow: auto;
 }
 .max_width{
@@ -106,6 +105,7 @@ section{
         rgba(247, 63, 0, 0.78) 118.81%);
     border-radius: 0rem 0rem 1rem 1rem;
 }
+
 .navbar.sticky .menu li a:hover{
     color: #fff;
 }
@@ -464,11 +464,15 @@ p{
     padding: 1.5rem 4rem;
     border-radius: 0.7rem;
 }
+textarea{
+    text-indent: 2.5rem;
+}
 .message{
     margin : 1.5rem auto;
     outline: 0;
     border: 0;
     border-radius: 0.7rem;
+    padding: 1.2rem 2rem 1rem;
 }
 .send_msg{
     margin: 0.1rem auto 1rem;
@@ -636,4 +640,11 @@ p{
     p.text{
         margin-right: 1rem;
     }
+    .message{
+        padding: 1.2rem 1rem 0;
+    }
+    textarea{
+        text-indent: 3.5rem;
+    }
+
 }
