@@ -643,6 +643,9 @@ textarea{
     .message{
         padding: 1.2rem 1rem 0;
     }
+    input.mail{
+        padding: 1.5rem 3.4rem;
+    }
     textarea{
         text-indent: 3.5rem;
     }
