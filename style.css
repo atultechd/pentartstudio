@@ -493,9 +493,15 @@ textarea{
     padding: 1.2rem 10.6rem;
 }
 
+<<<<<<< HEAD
 
 /*................Media Queries for responsiveness......................*/
 
+=======
+
+/*................Media Queries for responsiveness......................*/
+
+>>>>>>> f52b494b9c372606a3883e9a2a901319f51f9e36
 
 @media(max-width: 998px){
     html{
@@ -649,4 +655,8 @@ textarea{
     textarea{
         text-indent: 3.5rem;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f52b494b9c372606a3883e9a2a901319f51f9e36
 }
